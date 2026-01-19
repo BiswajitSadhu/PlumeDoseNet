@@ -1,6 +1,6 @@
 # PlumeDoseNet
 
-> **[Short Project Tagline]** > * Interpolation-Driven Machine Learning Approaches for Plume Shine Dose Estimation: A Comparison of XGBoost, Random Forest, and TabNet.*
+*Interpolation-Driven Machine Learning Approaches for Plume Shine Dose Estimation: A Comparison of XGBoost, Random Forest, and TabNet.*
 
 ---
 
@@ -157,5 +157,6 @@ streamlit run app_pdosenet.py
 
 This project is released under the MIT License.
 See the LICENSE file for full license details.
+
 
 
