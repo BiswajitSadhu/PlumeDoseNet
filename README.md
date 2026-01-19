@@ -153,8 +153,9 @@ streamlit run app_pdosenet.py
 **[TODO: Add Contribution Guidelines]**
 *Feel free to fork this repository and submit pull requests.*
 
-## 📄 License
+📄 License
 
-This project is licensed under the 🚨 **[TODO]** 🚨 License - see the https://www.google.com/search?q=LICENSE file for details.
+This project is released under the MIT License.
+See the LICENSE file for full license details.
 
 
