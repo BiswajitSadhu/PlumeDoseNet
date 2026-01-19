@@ -1,13 +1,13 @@
 # PlumeDoseNet
 
-> **[Short Project Tagline]** > * An hybrid machine learning framework for interpolating and predicting plume shine dose distribution.*
+> **[Short Project Tagline]** > * Interpolation-Driven Machine Learning Approaches for Plume Shine Dose Estimation: A Comparison of XGBoost, Random Forest, and TabNet.*
 
 ---
 
 ## Introduction
 
-🚨 **[TODO: Add Project Description]** 🚨
-*Briefly explain. This project utilizes ensemble learning techniques (XGBoost, Random Forest, TabNet).....*
+🚨 **[Project Description]** 🚨
+PlumeDoseNet is a machine learning–based framework for rapid plume shine dose estimation. The project employs XGBoost, Random Forest, and TabNet models trained on interpolation-enhanced datasets to provide fast, accurate, and physics-consistent surrogate predictions for radiological consequence assessment.
 
 🚨 **[TODO: Diagram]** 🚨
 
@@ -35,6 +35,8 @@ PlumeDoseNet/
 ├── main_optuna.py               # Hyperparameter optimization for TabNet
 ├── main_train.py                # Main training execution script
 └── main_evaluate.py             # Inference and evaluation script
+└── app_pdosenet.py              # Streamlit based GUI; command to run: streamlit run app_pdosenet.py
+
 
 ```
 
@@ -62,7 +64,7 @@ Follow these steps in order to reproduce the results.
 
 Before training, we must generate the interpolated dataset and create a strictly separated test set to prevent data leakage.
 
-* **Step 1: Interpolation** Generates a finer grid of data points using Akima interpolation.
+* **Step 1: Interpolation** Generates a finer grid of data points using Akima interpolation. The geenrated dataset is also available at Zenodo for download. Save it in "Library" directory.
 ```bash
 python interpolate_akima_finer.py
 
@@ -105,7 +107,7 @@ python main_optuna.py
 
 ### 5. Training Models
 
-Train the models (XGBoost, Random Forest, TabNet). You will be prompted to select which models to run.
+Train the models (XGBoost, Random Forest, TabNet). You will be prompted to select which models to run. 
 
 ```bash
 python main_train.py
@@ -114,6 +116,8 @@ python main_train.py
 
 * **Interactive Mode:** Type `xgboost`, `tabnet`, or `all` when prompted.
 * **Outputs:** Trained models are saved to `output_dir/`.
+
+N.B: Trained models and associated files are avaialble for download from Zenodo. save it in "saved_model" folder inside parent directory for directly using saved models without retraining.
 
 ### 6. Evaluation
 
@@ -141,6 +145,19 @@ python main_evaluate.py
 
 ---
 
+### 7. Web-based GUI app
+
+A web-based graphical user interface (GUI) has been developed to enable interactive plume shine dose prediction using the trained machine learning models. The application allows users to provide scenario-specific inputs, including radionuclide, downwind distance, release height, and atmospheric stability category. Based on the selected inputs, the GUI generates plume shine dose predictions using the trained XGBoost, Random Forest, and TabNet models, along with the corresponding reference (true) dose values for comparison.
+
+The interface is implemented using Streamlit and is intended for rapid scenario evaluation, model intercomparison, and demonstration purposes.
+
+To launch the GUI locally, run:
+
+```bash
+streamlit run app_pdosenet.py
+
+```
+
 ## 🤝 Contributing
 
 **[TODO: Add Contribution Guidelines]**
@@ -149,3 +166,4 @@ python main_evaluate.py
 ## 📄 License
 
 This project is licensed under the 🚨 **[TODO]** 🚨 License - see the https://www.google.com/search?q=LICENSE file for details.
+
