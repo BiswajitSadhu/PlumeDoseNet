@@ -9,7 +9,7 @@
 **[Project Description]** 
 PlumeDoseNet is a machine learning–based framework for rapid plume shine dose estimation. The project employs XGBoost, Random Forest, and TabNet models trained on interpolation-enhanced datasets to provide fast, accurate, and physics-consistent surrogate predictions for radiological consequence assessment.
 
-[psd_figure_edited.pdf](https://github.com/user-attachments/files/24818884/psd_figure_edited.pdf)
+<img width="605" height="265" alt="psd" src="https://github.com/user-attachments/assets/811291da-5950-4f6d-948b-4231bc3e8d4b" />
 
 ---
 
@@ -158,6 +158,7 @@ If you would like to improve the codebase, add features, or report issues, pleas
 
 This project is released under the MIT License.
 See the LICENSE file for full license details.
+
 
 
 
