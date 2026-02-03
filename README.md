@@ -142,22 +142,37 @@ A web-based graphical user interface (GUI) has been developed to enable interact
 
 The interface is implemented using Streamlit and is intended for rapid scenario evaluation, model intercomparison, and demonstration purposes.
 
-To launch the GUI locally, run:
+> [!IMPORTANT]
+> Before running the GUI app, make sure the file paths inside app_pdosenet.py correctly point to your models, encoders, scaler files and supporting artifacts.
 
-```bash
-streamlit run app_pdosenet.py
+- **Option 1 — Use Pretrained Models (Quick Start)** \
+  Download all required files from Zenodo: 10.5281/zenodo.18266001 \
+  Create a folder named: ` saved_models/ ` \
+  Place all **.json** and **.pkl** files inside it. Ensure paths in app_pdosenet.py point to ` saved_models/. ` \
+  Run:
+  ```bash
+  streamlit run app_pdosenet.py
+  ```
 
-```
+- **Option 2 — Use Self-Trained Models** \
+  Train models using:
+  ```bash
+  python main_train.py
+  ```
+  
+  Models will be saved in: ` output_dir/ ` \
+  Update file paths inside load_artifacts() in app_pdosenet.py to point to output_dir/ instead of saved_models/.
 
-🤝 Contributing
+### 🤝 Contributing
 
 Contributions are welcome.
 If you would like to improve the codebase, add features, or report issues, please feel free to fork the repository and submit a pull request. Constructive suggestions and discussions are also encouraged.
 
-📄 License
+### 📄 License
 
 This project is released under the MIT License.
 See the LICENSE file for full license details.
+
 
 
 
